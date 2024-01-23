@@ -71,14 +71,15 @@ def mf_report(dt):
                 df.loc[len(df)] = scheme
     return df
 
-df1 = mf_report('19-JAN-2024')
-df2 = mf_report('18-JAN-2024')
+df1 = mf_report('22-JAN-2024')
+df2 = mf_report('19-JAN-2024')
 
 result_df = pd.merge(df1, df2, on='Scheme Code', how='inner')
 selected_columns = result_df[['Scheme Code','Scheme Name_x','Date\r_x','Net Asset Value_x','Date\r_y','Net Asset Value_y']]
 
-# icici - 5682   parakh parik - 6744  tata digital - 135795 pgim - 125307 quant - 120828
-
+result = selected_columns.loc[(selected_columns['Scheme Code'] == '141841') | (selected_columns['Scheme Code'] == '122639') | (selected_columns['Scheme Code'] == '135795') | (selected_columns['Scheme Code'] == '125307') | (selected_columns['Scheme Code'] == '120828')]
+# icici - 141841   parakh parik - 122639  tata digital - 135795 pgim - 125307 quant - 120828
+result
 
 # %%
 from datetime import timedelta, date
