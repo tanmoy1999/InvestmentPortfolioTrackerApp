@@ -34,3 +34,4 @@ selected_columns = result_df[['Scheme Code','Scheme Name_x','Date\r_x','Net Asse
 pgim = k[k['Scheme Code'].str.contains('125307', case=False)]
 icici = k[k['Scheme Code'].str.contains('125307', case=False)]
 # icici - 5682   parakh parik - 6744  tata digital - 135795 pgim - 125307 quant - 120828
+
