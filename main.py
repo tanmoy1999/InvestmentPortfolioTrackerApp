@@ -28,4 +28,9 @@ df2 = mf_report('18-JAN-2024')
 result_df = pd.merge(df1, df2, on='Scheme Code', how='inner')
 selected_columns = result_df[['Scheme Code','Scheme Name_x','Date\r_x','Net Asset Value_x','Date\r_y','Net Asset Value_y']]
 
+
+# Filter
+
+pgim = k[k['Scheme Code'].str.contains('125307', case=False)]
+icici = k[k['Scheme Code'].str.contains('125307', case=False)]
 # icici - 5682   parakh parik - 6744  tata digital - 135795 pgim - 125307 quant - 120828
